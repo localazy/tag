@@ -47,7 +47,7 @@ inputs:
     required: false
     default: ""
   rename_to:
-    description: "New name of the 'rename_from' tag".
+    description: "New name of the 'rename_from' tag."
     required: false
     default: ""
   delete:
