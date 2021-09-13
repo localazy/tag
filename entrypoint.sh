@@ -19,10 +19,10 @@ if [ ! -z "$INPUT_WRITE_KEY" ]; then
 fi
 
 if [ ! -z "$INPUT_PUBLISH" ]; then
-  COMMAND="$COMMAND $INPUT_PUBLISH"
+  COMMAND="$COMMAND publish $INPUT_PUBLISH"
 fi
 
-if [ ! -z "$INPUT_PROMOTE_FROM" -a ! -z "$INPUT_PROMOTE_TO"]; then
+if [ ! -z "$INPUT_PROMOTE_FROM" -a ! -z "$INPUT_PROMOTE_TO" ]; then
   COMMAND="$COMMAND promote $INPUT_PROMOTE_FROM $INPUT_PROMOTE_TO"
 fi
 
@@ -30,7 +30,7 @@ if $INPUT_LIST; then
   COMMAND="$COMMAND list"
 fi
 
-if [ ! -z "$INPUT_RENAME_FROM" -a ! -z "$INPUT_RENAME_TO"]; then
+if [ ! -z "$INPUT_RENAME_FROM" -a ! -z "$INPUT_RENAME_TO" ]; then
   COMMAND="$COMMAND rename $INPUT_RENAME_FROM $INPUT_RENAME_TO"
 fi
 
@@ -38,7 +38,7 @@ if [ ! -z "$INPUT_DELETE" ]; then
   COMMAND="$COMMAND delete $INPUT_DELETE"
 fi
 
-if [ ! -z "$INPUT_MERGE_FROM" -a ! -z "$INPUT_MERGE_TO" -a ! -z "$INPUT_MERGE_OUTPUT"]; then
+if [ ! -z "$INPUT_MERGE_FROM" -a ! -z "$INPUT_MERGE_TO" -a ! -z "$INPUT_MERGE_OUTPUT" ]; then
   COMMAND="$COMMAND merge"
   if [ ! -z "$INPUT_MERGE_PARAMETERS" ]; then
     COMMAND="$COMMAND $INPUT_MERGE_PARAMETERS"
@@ -50,6 +50,5 @@ if [ ! -z "$INPUT_WORKDIR" ]; then
   cd $INPUT_WORKDIR
 fi
 
-echo $COMMAND
 echo "::set-output name=command::$COMMAND"
 $COMMAND
