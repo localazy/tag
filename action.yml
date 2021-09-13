@@ -1,43 +1,43 @@
-name: 'Localazy Tag'
-description: 'Handle Localazy's release tags'
-author: 'Localazy'
+name: "Localazy Tag"
+description: "Handle Localazy's release tags"
+author: "Localazy"
 branding:
-  icon: 'download-cloud'
-  color: 'blue'
+  icon: "download-cloud"
+  color: "blue"
 
 inputs:
   workdir: 
-    description: 'Defines the working directory where to invoke Localazy CLI command.'
+    description: "Defines the working directory where to invoke Localazy CLI command."
     required: false
-    default: ''
+    default: ""
   config_file: 
-    description: 'The filename of the configuration file. Default: localazy.json'
+    description: "The filename of the configuration file. Default: localazy.json"
     required: false
-    default: ''
+    default: ""
   key_file:
-    description: 'The filename of the key file.'
+    description: "The filename of the key file."
     required: false
-    default: ''
+    default: ""
   read_key: 
-    description: 'The read key for the project on Localazy. Required for read operations (e.g. listing tags)'
+    description: "The read key for the project on Localazy. Required for read operations (e.g. listing tags)"
     required: false
-    default: ''
+    default: ""
   write_key: 
-    description: 'The write key for the project on Localazy. Required for write operations (e.g. publishing a tag)'
+    description: "The write key for the project on Localazy. Required for write operations (e.g. publishing a tag)"
     required: false
-    default: ''
+    default: ""
   publish:
-    description: 'Name of a newly created tag under which app's current state will be stored.'
+    description: "Name of a newly created tag under which app's current state will be stored."
     required: false
-    default: ''
+    default: ""
   promote_from:
     description: "Promote tag's state into 'promote_to' state and overwrite it's state"
     required: false
-    default: ''
+    default: ""
   promote_to:
     description: "Promotion target of the 'promote_from' tag"
     required: false
-    default: ''
+    default: ""
   list:
     description: "List existing tags"
     required: false
@@ -45,33 +45,33 @@ inputs:
   rename_from:
     description: "Name of the tag you want to rename"
     required: false
-    default: ''
+    default: ""
   rename_to:
     description: "New name of the 'rename_from' tag"
     required: false
-    default: ''
+    default: ""
   delete:
     description: "Name of the tag you want to delete"
     required: false
-    default: ''
+    default: ""
   merge_from:
     description: "Merge tag's state into 'merge_to' tag"
     required: false
-    default: ''
+    default: ""
   merge_to:
     description: "Merge target of the 'merge_from' tag"
     required: false
-    default: ''
+    default: ""
   merge_output:
     description: "Name of the newly created tag of the merge operation"
     required: false
-    default: ''
+    default: ""
   merge_parameters:
     description: "Parameters for the merge operation. See https://localazy.com/docs/cli/release-tags#parameters"
     required: false
-    default: ''
+    default: ""
 
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"

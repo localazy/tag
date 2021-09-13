@@ -50,4 +50,6 @@ if [ ! -z "$INPUT_WORKDIR" ]; then
   cd $INPUT_WORKDIR
 fi
 
+echo $COMMAND
+echo "::set-output name=command::$COMMAND"
 $COMMAND
