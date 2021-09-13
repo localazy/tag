@@ -1,0 +1,77 @@
+name: "Localazy Tag"
+description: "Manage Localazy's release tags"
+author: "Localazy"
+branding:
+  icon: "download-cloud"
+  color: "blue"
+
+inputs:
+  workdir: 
+    description: "Defines the working directory where to invoke Localazy CLI command."
+    required: false
+    default: ""
+  config_file: 
+    description: "The filename of the configuration file. Default: localazy.json"
+    required: false
+    default: "localazy.json"
+  key_file:
+    description: "The filename of the key file."
+    required: false
+    default: ""
+  read_key: 
+    description: "The read key for the project on Localazy. Required for read operations (e.g. listing tags)."
+    required: false
+    default: ""
+  write_key: 
+    description: "The write key for the project on Localazy. Required for write operations (e.g. publishing a tag)."
+    required: false
+    default: ""
+  list:
+    description: "List existing tags."
+    required: false
+    default: false
+  publish:
+    description: "Name of a newly created tag under which app's current state will be stored."
+    required: false
+    default: ""
+  promote_from:
+    description: "Promote tag's state into 'promote_to' state and overwrite it's state."
+    required: false
+    default: ""
+  promote_to:
+    description: "Promotion target of the 'promote_from' tag."
+    required: false
+    default: ""
+  rename_from:
+    description: "Name of the tag you want to rename."
+    required: false
+    default: ""
+  rename_to:
+    description: "New name of the 'rename_from' tag."
+    required: false
+    default: ""
+  delete:
+    description: "Name of the tag you want to delete."
+    required: false
+    default: ""
+  merge_from:
+    description: "Merge tag's state into 'merge_to' tag."
+    required: false
+    default: ""
+  merge_to:
+    description: "Merge target of the 'merge_from' tag."
+    required: false
+    default: ""
+  merge_output:
+    description: "Name of the output tag of the merge operation."
+    required: false
+    default: ""
+  merge_parameters:
+    description: "Parameters for the merge operation. See https://localazy.com/docs/cli/release-tags#parameters"
+    required: false
+    default: ""
+
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
