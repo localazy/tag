@@ -2,7 +2,7 @@ name: "Localazy Tag"
 description: "Manage Localazy's release tags"
 author: "Localazy"
 branding:
-  icon: "download-cloud"
+  icon: "tag"
   color: "blue"
 
 inputs:
