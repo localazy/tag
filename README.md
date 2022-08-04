@@ -28,6 +28,11 @@ Manage Localazy's release tags. For full overview please [visit the documentatio
 
 **Optional** List existing release tags.
 
+
+### `publish`
+
+**Optional** Publish tag.
+
 ### `promote_from`
 
 **Optional** Promote tag's state into _promote_to_ state and overwrite it's state. `promote_to` must also be defined.
